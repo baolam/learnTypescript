@@ -1,11 +1,11 @@
 "use strict";
+// const User = {
+//   name : "Nguyễn Đức Bảo Lâm",
+//   email : "lam01662052827@gmail.com",
+//   isActive : true
+// };
 Object.defineProperty(exports, "__esModule", { value: true });
-var User = {
-    name: "Nguyễn Đức Bảo Lâm",
-    email: "lam01662052827@gmail.com",
-    isActive: true
-};
-function createUser(_a) {
-    var string = _a.name, _b = _a.isPaid, boolean = _b === void 0 ? true : _b;
+function createUser(user) {
+    return user;
 }
-createUser({ name: "NDBL", isPaid: false });
+createUser({ name: "", email: "", isActive: true });

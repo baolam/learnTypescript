@@ -17,16 +17,23 @@
 // }
 
 type User = {
+  readonly _id : string;
   name : string;
   email : string;
-  isActive : boolean
+  isActive : boolean;
+  creadcardDetails? : number;
+};
+
+type cardNumber = {
+  cardnumber : string
+};
+
+type cardDate = {
+  cardDate : string
 }
 
-function createUser(user : User) : User
-{
-  return user;
-}
-
-createUser({ name : "", email : "", isActive : true });
+type cardDetails = cardNumber & cardDate & {
+  cvv : number
+};
 
 export {};
