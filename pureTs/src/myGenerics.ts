@@ -47,3 +47,25 @@ function anotherFunction<T, U extends Database>(valueOne : T, valueTwo : U) : ob
 }
 
 // console.log(anotherFunction(3, { connection : "haha", username : "keke", password : "nono" }));
+interface Quiz {
+  name : string;
+  type : string;
+}
+
+interface Course {
+  name : string;
+  author : string;
+  subject : string;
+}
+
+class Sellable<T> {
+  public cart : T[] = [];
+
+  addToCart(product : T)
+  {
+    this.cart.push(product);
+  }
+}
+
+// const sellCourse = new Sellable<Course>();
+// sellCourse.addToCart({ name : "124", author : "NDBL", subject : "Unknown" });

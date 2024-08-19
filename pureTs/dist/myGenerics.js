@@ -22,3 +22,19 @@ const getMoreSearchProducts = (products) => {
     const myIndex = 0;
     return products[myIndex];
 };
+function anotherFunction(valueOne, valueTwo) {
+    return {
+        valueOne,
+        valueTwo
+    };
+}
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
+// const sellCourse = new Sellable<Course>();
+// sellCourse.addToCart({ name : "124", author : "NDBL", subject : "Unknown" });
