@@ -57,4 +57,43 @@ function getFood(pet : Fish | Bird)
   else console.log("Không nên ăn!");
 }
 
+interface Circle {
+  kind : "circle";
+  radius : number;
+}
+
+interface Square {
+  kind : "square";
+  side : number;
+}
+
+interface Rectangle {
+  kind : "rectangle";
+  length : number;
+  width : number
+}
+
+// interface Shape extends Circle, Square {}
+type Shape = Circle | Square | Rectangle;
+
+function getTrueShape(shape : Shape) {
+  if (shape.kind === "circle")
+    return Math.PI * shape.radius ** 2;
+  // return shape.side ** 2;
+}
+
+function getArea(shape : Shape) {
+  switch(shape.kind) {
+    case "circle":
+      return Math.PI * shape.radius ** 2;
+    case "square":
+      return shape.side ** 2;
+    case "rectangle":
+      return shape.length * shape.width;
+    default:
+      const _defaultforshape : never = shape;
+      return _defaultforshape;
+  }
+}
+
 export {};

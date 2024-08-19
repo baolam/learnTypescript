@@ -34,3 +34,21 @@ function getFood(pet) {
     else
         console.log("Không nên ăn!");
 }
+function getTrueShape(shape) {
+    if (shape.kind === "circle")
+        return Math.PI * shape.radius ** 2;
+    // return shape.side ** 2;
+}
+function getArea(shape) {
+    switch (shape.kind) {
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        case "square":
+            return shape.side ** 2;
+        case "rectangle":
+            return shape.length * shape.width;
+        default:
+            const _defaultforshape = shape;
+            return _defaultforshape;
+    }
+}
